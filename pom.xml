@@ -24,6 +24,12 @@
   </dependencies>
   <build>
     <finalName>mytest</finalName>
-    <plugins></plugins>
+    <plugins>
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+      <version>4.0.0+</version>
+    </plugin>
+  </plugins>
   </build>
 </project>
