@@ -21,6 +21,31 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>nl.tritales.springrestdoc</groupId>
+      <artifactId>springrestdoc</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>nl.tritales.springrestdoc</groupId>
+      <artifactId>springrestdoc</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.leandreck.endpoints</groupId>
+      <artifactId>annotations</artifactId>
+      <version>0.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>prosemirror-keymap</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>prosemirror-keymap</artifactId>
+      <version>1.2.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>mytest</finalName>
