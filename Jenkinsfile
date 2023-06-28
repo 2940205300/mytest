@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('--------拉取git仓库代码--------') {
             steps {
-                echo '拉取git仓库代码 success'
-            }
+  checkout scmGit(branches: [[name: '${tag}']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/2940205300/mytest.git']])            }
         }
          stage('--------maven构建中--------') {
             steps {
