@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    envirment{
+        username='d2940205300'
+        password='twy528985211'
+        addr='registry.cn-hangzhou.aliyuncs.com'
+        registry='hh_hh/hh_repo'
+    }
+    
     stages {
         stage('--------拉取git仓库代码--------') {
             steps {
@@ -18,11 +25,18 @@ pipeline {
         }
          stage('--------docker自定义镜像--------') {
             steps {
+                sh '''mv target/*.jar docker/
+               docker build -t mytest:${tag} docker/
+                docker image prune -f'''
                 echo 'docker自定义镜像 success'
             }
         }
         stage('--------推送aliyun仓库--------') {
             steps {
+                sh '''docker login --username=${username} -p${password} ${addr}
+                docker tag mytest:${tag} {$addr}/${registry}:${tag}
+                 docker push {$addr}/${registry}:${tag}
+                     '''
                 echo '推送aliyun仓库 success'
             }
         }
