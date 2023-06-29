@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    envirment{
+    environment{
         username='d2940205300'
         password='twy528985211'
         addr='registry.cn-hangzhou.aliyuncs.com'
