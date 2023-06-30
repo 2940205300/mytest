@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sh '''docker login --username=${username} -p${password} ${addr}
                 docker tag mytest:${tag} ${addr}/${registry}:${tag}
-                 docker push {$addr}/${registry}:${tag}
+                 docker push ${addr}/${registry}:${tag}
                      '''
                 echo '推送aliyun仓库 success'
             }
