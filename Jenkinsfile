@@ -42,7 +42,7 @@ pipeline {
         }
         stage('--------通知目服务器拉取镜像中--------') {
             steps {
-                sshPublisher(publishers: [sshPublisherDesc(configName: 'node', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: "/usr/local/jenkins/deploy.sh $registry/$repo $JOB_NAME $tag $port", execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'node', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '/usr/local/jenkins/deploy.sh $registry/$repo $JOB_NAME $tag $port', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
                 echo '通知目服务器拉取镜像中 success'
             }
         }
